@@ -3,13 +3,25 @@
 //1, Hide text
 $(".description").hide();
 //2, User clicks img
-$("img").click(function() {
-    //2.2, show text
+
+function hideImage() {
     $(this).next().show();
     //2.2, remove img
-    $(this).remove();   
-});
-    
+    $(this).hide(); 
+}
+
+function hideText() {
+    $(this).hide();
+    $(this).prev().show();
+}
+
+$("img").click(hideImage);
+$(".description").click(hideText);
+
+
+
+
+
     
 
 
